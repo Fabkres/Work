@@ -9,7 +9,6 @@ interface PropsAttributes {
 
 const ButtonCalculator: React.FC<PropsAttributes> = ({ title, onClick, width }) => {
     const handleClick = () => {
-
         console.log(`O botão "${title}" foi clicado.`);
         if (onClick) {
             onClick();

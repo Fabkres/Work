@@ -13,7 +13,8 @@ export const Buttons = styled.div<ButtonsAttributes>`
     width: ${props => props.width || 50}px;
     border-radius: 46px;
     display: flex;
-    cursor: pointer;
+    cursor: url("/cursor_header.png"), pointer;
+
     :active {
        display: none;
     }

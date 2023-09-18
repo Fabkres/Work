@@ -3,7 +3,7 @@ import styles from "../../Style";
 
 export const ButtonStyle = styled.button<{ $primary?: boolean; }>`
     border: none;
-    cursor: pointer;
+    cursor: url("/cursor_header.png"), pointer;
     margin-right: 8px;
     background-color: ${styles.colors.green};
     padding: 10px;

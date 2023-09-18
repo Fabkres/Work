@@ -1,6 +1,6 @@
 import { styled } from "styled-components";
 import backgroundBody from "../../assets/images/SubtractBody.png";
-import backgroundBodyDown from "../../assets/images/SubtractParte2.png";
+import backgroundBodyDown from "../../assets/images/backgroundTasks.png";
 import rows from "../../assets/images/rows.png";
 
 
@@ -63,48 +63,13 @@ export const TitleSmall = styled.div`
 `;
 
 
-export const BackgroundBody = styled.div`
-    border-radius: 49px;
-    background: url(${backgroundBody});
-    background-size: 100%;
-    height: auto;
-    margin-top: 30px;
-    width: 100%;
-    background-size: 100%;
-    background-repeat: no-repeat;
-    object-fit: cover;
-    @media only screen and (max-width: 1070px) {
-       background: #f8fae4;
-       width: auto;
-    }
-
-    @media only screen and (max-width: 600px) {
-       background: #f8fae4;
-       width: 120%;
-    }
-
-`;
-
 export const BackgroundBodyDown = styled.div`
-    border-radius: 49px;
     background: url(${backgroundBodyDown});
     background-size: 100%;
-    height: auto;
+    height: 100%;
     width: 100%;
     background-size: 100%;
     background-repeat: no-repeat;
-    margin-top: 90px;
-    object-fit: cover;
-    @media only screen and (max-width: 1070px) {
-       background: #f8fae4;
-       width: auto;
-    }
-
-    @media only screen and (max-width: 600px) {
-       background: #f8fae4;
-       width: 120%;
-    }
-
 `;
 
 

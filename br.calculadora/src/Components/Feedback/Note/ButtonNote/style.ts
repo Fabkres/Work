@@ -6,8 +6,9 @@ interface PropsButton {
 
 export const Button = styled.div<PropsButton>`
     border-radius: 5.357px;
-    border: 1.339px solid ${props =>  props.active ? "black" : "#83C2E2"};
-    background: ${props =>  props.active ? "aliceblue" : "#FFF"};
+    border: 3px solid ${props => props.active ? "black" : "#83C2E2"};
+    background: ${props => props.active ? "aliceblue" : "#FFF"};
+    font-weight: ${props => props.active ? "bold" : "normal"};
     display: flex;
     flex-direction: row;
     width: 25.446px;
@@ -16,7 +17,7 @@ export const Button = styled.div<PropsButton>`
     justify-content: center;
     gap: 1.786px;
     flex-shrink: 0;
-    cursor: pointer;
+    cursor: url("/cursor_header.png"), pointer;
     &:hover{
         background-color: aliceblue;
     }

@@ -80,6 +80,9 @@ export const Column = styled.div`
     }
     #center{
         justify-content: center;
+        display: flex;
+    gap: 20px;
+
     }
     #start{
         justify-content: start;
@@ -178,8 +181,8 @@ interface GridAttributes {
 
 export const Grid = styled.div<GridAttributes>`
     display: grid;
-    column-gap: 15px;
-    padding: 16px;
+    column-gap: 10px;
+    padding: 20px;
     grid-template-areas: "CD CD CD";
     grid-template-columns: ${(props) =>
            props.checkMockup.length === 4 ? "repeat(4, 24.5%)" : props.checkMockup.length === 3 ? "repeat(3, 33%)" : props.checkMockup.length === 2 ? "repeat(2, 50%)" : "repeat(2, 50%)"};

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Column, Grid, Padding, Row, RowResponse } from "../../Style/GlobalStyles";
 import Input from "../Input";
-import { BackgroundBody, Container, IconPlus, RowRed, Rows, Title, TitleSmall } from "./style";
+import { BackgroundBody, BackgroundBodyDown, Container, IconPlus, RowRed, Rows, Title, TitleSmall } from "./style";
 
 
 const Subtract = () => {
@@ -18,16 +18,37 @@ const Subtract = () => {
     return (
         <>
             <Container>
-
-                <BackgroundBody>
-                    <RowResponse style={{ width: "100%" }}>
+                <BackgroundBodyDown>
+                    <RowResponse>
                         <RowRed />
                         <Rows>
                             <Column style={{ alignItems: "center" }}>
+
                                 <Title style={{ margin: "auto" }}>Preço na Prática</Title>
-                                <Padding padding="16px" />
+                                <Padding padding="0px" />
                                 <Padding />
                                 <TitleSmall>1° forma de calcular o preço</TitleSmall>
+                                <Row>
+                                    <Padding padding="2px" width="8%" />
+                                    <Grid checkMockup={[{}, {}, {}, {}]}>
+                                        <Input value={custo ? ((custo * 0.5) * 2 + parseFloat(custo.toString())).toFixed(2) : "100%"} text="Preço" />
+                                        <Input value={custo} type="number" onChange={(e: any) => setCusto(e.target.value)} text="Custo" />
+                                        <Input value={custo ? custo * 0.5 : "25%"} text="Pagamento pelo trabalho" />
+                                        <Input value={custo ? custo * 0.5 : "25%"} text="Lucro para o Negócio" />
+                                    </Grid>
+                                </Row>
+                                <Padding padding="24px" />
+                            </Column>
+                        </Rows>
+                    </RowResponse>
+                </BackgroundBodyDown>
+                <Padding padding="16px" />
+                <BackgroundBody>
+                    <RowResponse style={{ width: "100%" }}>
+                        {/* <RowRed /> */}
+                        <Rows>
+                            <Column style={{ alignItems: "center" }}>
+                                <TitleSmall>2° forma de calcular o preço</TitleSmall>
                                 <Padding padding="32px" />
                                 <Row id="center">
                                     <Input value={custoProduc} onChange={(e: any) => { setCustoProduc(e.target.value); }} type="number" text="Custo de Produção" />
@@ -65,27 +86,6 @@ const Subtract = () => {
                                     <Input value={(totais + totais * 0.3).toFixed(2)} text="Preço" />
                                 </Row>
                                 <Padding padding="45px" />
-                            </Column>
-                        </Rows>
-                    </RowResponse>
-                </BackgroundBody>
-                <Padding padding="16px" />
-                <BackgroundBody>
-                    <RowResponse>
-                        <RowRed />
-                        <Rows>
-                            <Column style={{ alignItems: "center" }}>
-                                <TitleSmall>2° forma de calcular o preço</TitleSmall>
-                                <Row>
-                                    <Padding padding="2px" width="8%" />
-                                    <Grid checkMockup={[{}, {}, {}, {}]}>
-                                        <Input value={custo ? ((custo * 0.5) * 2 + parseFloat(custo.toString())).toFixed(2) : "100%"} text="Preço" />
-                                        <Input value={custo} type="number" onChange={(e: any) => setCusto(e.target.value)} text="Custo" />
-                                        <Input value={custo ? custo * 0.5 : "25%"} text="Pagamento pelo trabalho" />
-                                        <Input value={custo ? custo * 0.5 : "25%"} text="Lucro para o Negócio" />
-                                    </Grid>
-                                </Row>
-                                <Padding padding="24px" />
                             </Column>
                         </Rows>
                     </RowResponse>

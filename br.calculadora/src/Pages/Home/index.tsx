@@ -6,6 +6,7 @@ import Calculator from "../../Components/Calculator";
 import Layout from "../../Components/Layout";
 import Subtract from "../../Components/Subtract";
 import Tasks from "../../Components/Tasks";
+import Login from "../../Components/Login";
 import { Padding } from "../../Style/GlobalStyles";
 import { ContainerHome, Grid } from "./style";
 import Feedback from "../../Components/Feedback";
@@ -34,6 +35,11 @@ const Homepage = () => {
                     <Route path="/tasks" element={
                         <ContainerHome>
                             <Tasks />
+                        </ContainerHome>
+                    } />
+                    <Route path="/login" element={
+                        <ContainerHome>
+                            <Login />
                         </ContainerHome>
                     } />
 
